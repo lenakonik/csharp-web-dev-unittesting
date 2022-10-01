@@ -10,11 +10,13 @@ namespace CarTests
         [TestMethod]
         public void EmptyTest()
         {
+            //arguments: expected, actual, delta
             Assert.AreEqual(10, 10, .001);
         }
 
         Car test_car;
 
+        //will run before each test method in a class
         [TestInitialize]
         public void CreateCarObject()
         {
@@ -25,9 +27,9 @@ namespace CarTests
         [TestMethod]
         public void TestInitialGasTank()
         {
+            
             Assert.AreEqual(10, test_car.GasTankLevel, .001);
         }
-
         //TODO: gasTankLevel is accurate after driving within tank range
         //TODO: gasTankLevel is accurate after attempting to drive past tank range
         //TODO: can't have more gas than tank size, expect an exception
